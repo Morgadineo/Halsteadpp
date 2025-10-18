@@ -1,32 +1,31 @@
-# Diretórios
+# Directories
 SRC_DIR = Examples
 FAKE_HEADERS = ../pycparser-main/utils/fake_libc_include 
 
-# Variáveis de compilação
+# Compilation variables
 CC = gcc
 CFLAGS = -E -nostdinc -I$(FAKE_HEADERS) 
 
-# Diretório alvo (permite sobrescrever com make DIR=...)
+# Target directory (can be overridden with make DIR=...)
 DIR ?= $(SRC_DIR)
 
-# Encontra TODOS os arquivos .c recursivamente no diretório-alvo
+# Find ALL .c files recursively in target directory
 SRCS = $(shell find $(DIR) -type f -name '*.c')
 PREPROCESSED = $(SRCS:.c=.i)
 
-# Regra padrão
+# Default rule
 all: preprocess
 
-# Pré-processar cada arquivo .c
+# Preprocess each .c file
 %.i: %.c
-	@echo "Pré-processando $<..."
+	@echo "Preprocessing $<..."
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -o "$@" "$<"
 
-# Pré-processar todos os arquivos do diretório especificado
+# Preprocess all files in specified directory
 preprocess: $(PREPROCESSED)
 
-# Limpar apenas os arquivos .i no diretório especificado
+# Clean only .i files in specified directory
 clean:
-	@echo "Limpando arquivos *.i em '$(DIR)'..."
+	@echo "Cleaning *.i files in '$(DIR)'..."
 	@find "$(DIR)" -type f -name '*.i' -delete
-
