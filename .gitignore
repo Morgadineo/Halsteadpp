@@ -1,0 +1,15 @@
+# Código excluido
+main.py/
+
+# Diretório com códigos para pré-compilação e uso
+Examples/
+
+# Ambiente virtual python
+.venv/
+.idea/
+__pycache__/
+
+# Diretório dos códigos que não serão utilizados no momento.
+Placeholders/
+csvs/
+
