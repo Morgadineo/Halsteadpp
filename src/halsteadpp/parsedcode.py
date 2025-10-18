@@ -1,6 +1,5 @@
-import pycparser
 from pycparser        import plyparser
-from objects.function import Function
+from .objects.function import Function
 from ast              import parse
 from os               import sep
 from typing           import Any, List, Tuple
