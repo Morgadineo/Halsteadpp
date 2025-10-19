@@ -130,59 +130,58 @@ hello_code.print_complexities()
 
 Halstead++ excludes the following syntactic operators from complexity calculations:
 
-    Semicolons (;)
+Semicolons (;)
 
-    Parentheses (())
+Parentheses (())
 
-    Braces ({})
+Braces ({})
 
-    Commas (,)
+Commas (,)
 
 This filtering provides more realistic complexity metrics by focusing on meaningful operators that contribute to actual cognitive load.
 
 ## Comprehensive Metrics
 
-    Halstead Metrics: n1, n2, N1, N2, vocabulary, length, volume, difficulty, level, effort, time, bugs
+Halstead Metrics: n1, n2, N1, N2, vocabulary, length, volume, difficulty, level, effort, time, bugs
 
-    Cyclomatic Complexity: McCabe complexity at function and file levels
+Cyclomatic Complexity: McCabe complexity at function and file levels
 
-    Line Metrics: Total lines, effective lines (excluding comments and empty lines)
+Line Metrics: Total lines, effective lines (excluding comments and empty lines)
 
-    Function Analysis: Individual metrics for each function
+Function Analysis: Individual metrics for each function
 
 ## Rich Visual Output
 
-    Formatted tables using the Rich library
+Formatted tables using the Rich library
 
-    Color-coded output for better readability
+Color-coded output for better readability
 
-    Detailed operator and operand listings
+Detailed operator and operand listings
 
 ## AST-Based Analysis
 
-    Accurate parsing using Python's AST capabilities
+Accurate parsing using Python's AST capabilities
 
-    Support for complex C constructs (pointers, structs, function calls, etc.)
+Support for complex C constructs (pointers, structs, function calls, etc.)
 
-    Real node detection to filter out compiler-generated code
+Real node detection to filter out compiler-generated code
 
 ## Metric Definitions
+n1: Number of distinct operators
 
-    n1: Number of distinct operators
+n2: Number of distinct operands
 
-    n2: Number of distinct operands
+N1: Total number of operators
 
-    N1: Total number of operators
+N2: Total number of operands
 
-    N2: Total number of operands
+Volume (V): Program size metric: (N1 + N2) × log₂(n1 + n2)
 
-    Volume (V): Program size metric: (N1 + N2) × log₂(n1 + n2)
+Difficulty (D): Program complexity: (n1 / 2) × (N2 / n2)
 
-    Difficulty (D): Program complexity: (n1 / 2) × (N2 / n2)
+Effort (E): Mental effort required: D × V
 
-    Effort (E): Mental effort required: D × V
-
-    Bugs (B): Estimated number of delivered bugs: E^(2/3) / 3000
+Bugs (B): Estimated number of delivered bugs: E^(2/3) / 3000
 
 # License
 
