@@ -112,17 +112,19 @@ hello_code.print_complexities()
 ```
 
 ### Outputs
-**Complexities Table:**
-<-- TODO IMAGE-->
+#### Complexities Table
+<img width="300" height="400" alt="Captura de tela de 2025-10-19 15-09-59" src="https://github.com/user-attachments/assets/13ebc988-6d05-431b-8c1b-187ffb7bba88" />
 
-**Functions complexity:**
-<-- TODO IMAGE>
 
-**Operators:**
-<-- TODO IMAGE>
+#### Functions complexity
+<img width="1600" height="121" alt="Captura de tela de 2025-10-19 15-11-01" src="https://github.com/user-attachments/assets/67d64d06-00fa-4dc2-a50f-7a27729e8747" />
 
-**Operands:**
-<-- TODO IMAGE>
+#### Operators
+<img width="350" height="130" alt="Captura de tela de 2025-10-19 15-11-45" src="https://github.com/user-attachments/assets/d5a53b61-a27d-427e-86d7-6003b519daea" />
+
+#### Operands
+<img width="350" height="130" alt="Captura de tela de 2025-10-19 15-12-13" src="https://github.com/user-attachments/assets/4bdfe440-3ac2-4b48-9105-79f389e9136a" />
+
 
 # Key Features
 
