@@ -1,6 +1,6 @@
 # Directories
-FAKE_HEADERS = ../pycparser-main/utils/fake_libc_include 
 SRC_DIR = ./
+FAKE_HEADERS = ../Halsteadpp/fake_libc_include/
 
 # Compilation variables
 CC = gcc
