@@ -35,12 +35,26 @@ Before using Halstead++, C source files must be preprocessed using the provided 
 Using the Makefile
 
 The repository includes a Makefile for easy preprocessing:
+### Preprocess a specific file
 ```
-# Preprocess all .c files in the Examples directory
-make DIR=Examples
+make main.i          # Creates main.i from main.c
+make utils.i         # Creates utils.i from utils.c
+```
+### Preprocess all .c files in current directory
+```
+make                 # Or: make preprocess
+```
 
-# Or use the default directory
-make
+### Preprocess all .c files in a subdirectory
+```
+make DIR=src         # Processes all .c files in ./src/
+make DIR=Examples    # Processes all .c files in ./Examples/
+```
+
+### Clean generated .i files
+```
+make clean           # Cleans .i files in current directory
+make DIR=src clean   # Cleans .i files in ./src/
 ```
 
 ## Basic Usage
