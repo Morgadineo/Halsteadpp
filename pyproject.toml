@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "halsteadpp"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python tool for analyzing C code complexity using Halstead and Cyclomatic metrics."
 readme = "README.md"
 license = { text = "MIT License" }
