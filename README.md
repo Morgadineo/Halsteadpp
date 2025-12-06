@@ -31,27 +31,36 @@ rich >= 13.0 (for formatted output)
 # Usage
 ## Prerequisites: Code Preprocessing
 
-Before using Halstead++, C source files must be preprocessed using the provided Makefile. This step is necessary because Halstead++ uses pycparser which requires preprocessed C code.
-Using the Makefile
+Before using Halstead++, C source files must be preprocessed using the provided Makefile. This step is necessary because Halstead++ uses pycparser which requires preprocessed C code and the fake-headers for the libraries.
+
+## Why fake headers are needed:
+
+The code is preprocessed with `-nostdinc` to avoid platform-specific standard headers.
+Instead, we use `pycparser`'s fake headers which provide minimal declarations
+(like `int printf(const char*, ...);`) without actual implementations.
+
+This makes the parsing portable across different systems (Linux, Windows, macOS).
+
+### Using the Makefile
 
 The repository includes a Makefile for easy preprocessing:
-### Preprocess a specific file
+#### Preprocess a specific file
 ```
 make main.i          # Creates main.i from main.c
 make utils.i         # Creates utils.i from utils.c
 ```
-### Preprocess all .c files in current directory
+#### Preprocess all .c files in current directory
 ```
 make                 # Or: make preprocess
 ```
 
-### Preprocess all .c files in a subdirectory
+#### Preprocess all .c files in a subdirectory
 ```
 make DIR=src         # Processes all .c files in ./src/
 make DIR=Examples    # Processes all .c files in ./Examples/
 ```
 
-### Clean generated .i files
+#### Clean generated .i files
 ```
 make clean           # Cleans .i files in current directory
 make DIR=src clean   # Cleans .i files in ./src/
