@@ -1,6 +1,6 @@
 # Directories
-SRC_DIR = Examples
 FAKE_HEADERS = ../pycparser-main/utils/fake_libc_include 
+SRC_DIR = ./
 
 # Compilation variables
 CC = gcc
