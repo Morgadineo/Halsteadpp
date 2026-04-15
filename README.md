@@ -17,7 +17,7 @@ pip install halsteadpp
 ### From Source
 ```
 git clone https://github.com/Morgadineo/Halsteadpp
-cd halsteadpp
+cd Halsteadpp
 pip install -e .
 ```
 
